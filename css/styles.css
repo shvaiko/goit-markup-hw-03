@@ -9,12 +9,46 @@
   --hover-btn: #188ce8;
   --filter-btn: #f5f4fa;
 }
+/* глобальный border-box */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 body {
+  margin: 0;
   background-color: var(--bg-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
+}
+/* глобальный сброс стилей по селектору тега */
+p,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
+/* «container» оборачивает контент хедера, футера и секций, то есть находится внутри них */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* visually-hidden */
 .visually-hidden {
@@ -37,9 +71,14 @@ body {
 .link {
   text-decoration: none;
 }
+/* header */
+.header {
+  border-bottom: 1px solid #ececec;
+}
 /* logo */
 .logo-header {
   color: var(--black);
+
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -51,6 +90,7 @@ body {
 /* site-nav */
 .site-nav .link {
   color: var(--secondary-text-color);
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -65,6 +105,7 @@ body {
 /* auth-nav */
 .auth-nav .link {
   color: var(--primary-text-color);
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -75,25 +116,37 @@ body {
 }
 /* hero */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--secondary-bg-color);
+
+  text-align: center;
 }
 .hero-title {
+  margin-bottom: 30px;
+
   color: var(--bg-color);
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 .hero-btn {
+  padding: 10px 32px;
+
   background-color: var(--accent);
   color: var(--bg-color);
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  border-radius: 4px;
+  border: transparent;
   cursor: pointer;
 }
 .hero-btn:hover,
@@ -102,8 +155,15 @@ body {
   color: var(--bg-color);
 }
 /* features */
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .features-title {
+  margin-bottom: 10px;
+
   color: var(--secondary-text-color);
+
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -112,8 +172,14 @@ body {
   line-height: 1.71;
 }
 /* activity */
+.activity {
+  padding-bottom: 94px;
+}
 .activity-title {
+  margin-bottom: 50px;
+
   color: var(--secondary-text-color);
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -121,17 +187,26 @@ body {
 }
 /* team */
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
   background-color: var(--filter-btn);
 }
 .team-title {
+  margin-bottom: 50px;
+
   color: var(--secondary-text-color);
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 }
 .team-name {
+  margin-bottom: 10px;
+
   color: var(--secondary-text-color);
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -140,12 +215,26 @@ body {
   line-height: 1.18;
   font-size: 16px;
 }
+.team-description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  width: 270px;
+  text-align: center;
+}
 /* footer */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: var(--secondary-bg-color);
 }
 .logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+
   color: var(--bg-color);
+
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -156,6 +245,7 @@ body {
 }
 .maps {
   color: var(--bg-color);
+
   line-height: 1.71;
   font-style: normal;
 }
@@ -165,6 +255,7 @@ body {
 }
 .link-footer {
   color: var(--list-address);
+
   line-height: 1.71;
   font-style: normal;
 }
@@ -172,15 +263,28 @@ body {
 .link-footer:focus {
   color: var(--accent);
 }
+.list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 /* Portfolio */
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .filter-btn {
+  margin-bottom: 50px;
+  padding: 6px 22px;
+
   background-color: var(--filter-btn);
   color: var(--secondary-text-color);
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: inherit;
+  border-radius: 4px;
+  border: transparent;
   cursor: pointer;
 }
 .filter-btn:hover,
@@ -189,7 +293,10 @@ body {
   color: var(--bg-color);
 }
 .portfolio-title {
+  margin-bottom: 4px;
+
   color: var(--secondary-text-color);
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -197,6 +304,14 @@ body {
 }
 .portfolio-text {
   color: var(--primary-text-color);
+
   line-height: 1.87;
   font-size: 16px;
+}
+.portfolio-description {
+  padding: 20px 24px;
+
+  width: 370px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
