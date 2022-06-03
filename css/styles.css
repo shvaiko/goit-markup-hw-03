@@ -42,7 +42,8 @@ ul {
 img {
   display: block;
 }
-/* «container» оборачивает контент хедера, футера и секций, то есть находится внутри них */
+/* «container» оборачивает контент хедера,
+ футера и секций, то есть находится внутри них */
 .container {
   width: 1200px;
   margin-left: auto;
@@ -161,7 +162,6 @@ img {
   text-transform: uppercase;
 }
 .hero-btn {
-  /* padding: 10px 32px; */
   padding-top: 10px;
   padding-right: 32px;
   padding-bottom: 10px;
@@ -201,6 +201,12 @@ img {
 .features-text {
   line-height: 1.71;
 }
+.features-list {
+  display: flex;
+}
+.features-item {
+  width: 270px;
+}
 /* activity */
 .activity {
   padding-bottom: 94px;
@@ -214,6 +220,12 @@ img {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+}
+.activity-list {
+  display: flex;
+}
+.activity-item:not(:last-child) {
+  margin-right: 30px;
 }
 /* team */
 .team {
@@ -251,6 +263,17 @@ img {
 
   width: 270px;
   text-align: center;
+}
+.team-list {
+  display: flex;
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 /* footer */
 .footer {
@@ -303,7 +326,6 @@ img {
 }
 .filter-btn {
   margin-bottom: 50px;
-  /* padding: 6px 22px; */
   padding-top: 6px;
   padding-right: 22px;
   padding-bottom: 6px;
@@ -326,6 +348,29 @@ img {
   background-color: var(--accent);
   color: var(--bg-color);
 }
+.btn-list {
+  display: flex;
+  justify-content: center;
+}
+.btn-item:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  width: 370px;
+}
+.portfolio-item:nth-child(3n) {
+  margin-right: 0;
+}
+.portfolio-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
 .portfolio-title {
   margin-bottom: 4px;
 
@@ -343,7 +388,6 @@ img {
   font-size: 16px;
 }
 .portfolio-description {
-  /* padding: 20px 24px; */
   padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
