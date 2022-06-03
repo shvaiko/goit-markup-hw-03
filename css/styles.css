@@ -88,7 +88,18 @@ img {
   color: var(--accent);
 }
 /* site-nav */
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-text-color);
 
   font-weight: 500;
@@ -102,8 +113,23 @@ img {
 .site-nav .current {
   color: var(--accent);
 }
+.main-nav {
+  display: flex;
+  align-items: center;
+}
 /* auth-nav */
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+.auth-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
 .auth-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -135,7 +161,11 @@ img {
   text-transform: uppercase;
 }
 .hero-btn {
-  padding: 10px 32px;
+  /* padding: 10px 32px; */
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
 
   background-color: var(--accent);
   color: var(--bg-color);
@@ -273,7 +303,11 @@ img {
 }
 .filter-btn {
   margin-bottom: 50px;
-  padding: 6px 22px;
+  /* padding: 6px 22px; */
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
 
   background-color: var(--filter-btn);
   color: var(--secondary-text-color);
@@ -309,7 +343,11 @@ img {
   font-size: 16px;
 }
 .portfolio-description {
-  padding: 20px 24px;
+  /* padding: 20px 24px; */
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
 
   width: 370px;
   border: 1px solid #eeeeee;
