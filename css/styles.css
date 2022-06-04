@@ -34,13 +34,10 @@ h3 {
   margin-top: 0;
   margin-bottom: 0;
 }
-ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* «container» оборачивает контент хедера,
  футера и секций, то есть находится внутри них */
@@ -66,6 +63,9 @@ img {
 }
 /* list-style hidden */
 .list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
 }
 /* text-decoration hidden */
@@ -194,6 +194,7 @@ img {
 
   color: var(--secondary-text-color);
 
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -206,6 +207,9 @@ img {
 }
 .features-item {
   width: 270px;
+}
+.features-item:not(:last-child) {
+  margin-right: 30px;
 }
 /* activity */
 .activity {
@@ -271,8 +275,10 @@ img {
   margin-right: 30px;
 }
 .team-item {
+  background-color: var(--bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
   border-radius: 0px 0px 4px 4px;
 }
 /* footer */
@@ -325,7 +331,6 @@ img {
   padding-bottom: 94px;
 }
 .filter-btn {
-  margin-bottom: 50px;
   padding-top: 6px;
   padding-right: 22px;
   padding-bottom: 6px;
@@ -351,6 +356,7 @@ img {
 .btn-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .btn-item:not(:last-child) {
   margin-right: 8px;
@@ -393,7 +399,6 @@ img {
   padding-bottom: 20px;
   padding-left: 24px;
 
-  width: 370px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
